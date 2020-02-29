@@ -52,6 +52,7 @@ public class UserRepositoryTest {
         assertFalse(FAKE_USERS.stream().map(User::getLogin).collect(Collectors.toList()).contains(user.getLogin()));
     }
 
+    @Test
     public void deleteUserWithSuccess() {
         User userToDelete = userRepository.getUsers().get(0);
         userRepository.deleteUser(userToDelete);
